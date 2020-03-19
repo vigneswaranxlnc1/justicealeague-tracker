@@ -1,9 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
-
 phases:
   install:
     commands:
@@ -12,8 +8,9 @@ phases:
     - apt-get install -y maven
   build:
     commands:
-    - echo building the justiceleague-tracker
+    - echo building the code-repo-demo
     - mvn install
+    - ls -larth 
 artifacts:
   files:
   - target/*.jar
